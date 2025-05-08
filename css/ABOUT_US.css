@@ -1,26 +1,51 @@
-body {
+/* Scoped styling for ABOUT_US page */
+.about-us-page {
     font-family: Arial, sans-serif;
     background-color: black;
     color: var(--text-color);
-  }
-.container-fluid{
+    padding: 20px;
+}
+
+.container-fluid {
     max-width: 1250px;
     margin: auto;
-    width: 100%;
+    width: 88%;
+    padding: 20px;
 }
 
 .the_team {
-   position: relative;
-   left: 270px;
-    height: 900px;
-    width: 800px;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    max-width: 80%;
     object-fit: cover;
+    border-radius: 50%; /* Ensures circular cropping */
+    background-color: transparent; /* Removes any background color */
+    overflow: hidden; /* Ensures no overflow outside the circle */
 }
 
 footer {
-  display: flex;
-  align-items: center;
-  position: relative;
-  bottom: 10px;
-  left: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 10px;
+    }
+
+    .the_team {
+        width: 100%;
+        height: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
 }
